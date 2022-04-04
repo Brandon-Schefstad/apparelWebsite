@@ -1,0 +1,246 @@
+/* Information:
+Sizes
+- Mobile: 375px
+- Desktop: 1440px
+Gradients
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+ */
+
+@import url('/images/bg-pattern-desktop.svg');
+@import url('/images/icon-arrow.svg');
+
+
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-desaturated-red: hsl(0, 36%, 70%);
+    --primary-soft-red: hsl(0, 93%, 68%);
+    --neutral-gray-red: hsl(0, 6%, 24%);
+    --font-size: 16px;
+    --font-family: 'Josefin Sans', sans-serif;
+    --line-padding: 2em;
+  }
+  /* Clear fix hack */
+  .clearfix:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  .clear {
+    clear: both;
+  }
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--gray-8);
+  }
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  /* Set core body defaults */
+  body {
+    min-height: 100vh;
+    overflow: hidden;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* 
+
+  ###############
+  BASE
+  ###############
+*/
+
+
+.hero{
+  height:50.2rem;
+}
+.logo{
+  position:absolute;
+  padding: 8em 0em 0em 8em;
+}
+.card{
+  background-image: url("/images/bg-pattern-desktop.svg");
+  width:118rem;
+  height:50rem;
+  display:flex;
+  flex-direction: column;
+}
+.josefin{
+  font-family: var(--font-family);
+}
+.card__title{
+  font-weight: 600;
+  padding:10% 0px 0px 10%;
+  line-height:1.8em;
+  font-size: 3rem;
+  width:50%;
+  text-align: left;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+.card__title__heading{
+  font-weight:400;
+  color:var(--neutral-gray-red);
+  position:relative;
+}
+.card__title__first-word{
+  font-weight:300;
+  color:var(--primary-desaturated-red)
+}
+.card__greeting{
+  color: var(--primary-desaturated-red);
+  width:30rem;
+  font-size:1.2rem;
+  padding-top:var(--line-padding);
+  text-align:left;
+  margin-left:12rem;
+  height:10em;
+}
+.card__email{
+
+  position:relative;
+  width:35%;
+  padding-left:12rem;
+
+}
+.card__email__input{
+  width:80%;
+  height:40px;
+  color:hsl(0, 74%, 74%);
+  border: 2px solid hsl(0, 56%, 81%);
+}
+.card__email__button{
+  height:40px;
+  border-radius:2rem;
+  background-color: var(--primary-soft-red);
+  position:absolute;
+  right:4rem;
+  padding:0.7rem 2rem;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow:00px 5px 10px hsl(0, 74%, 74%);
+
+
+}
+.hero__image{
+  position:absolute;
+  right:0;
+}
+.hero__image--mobile{
+  display:none;
+}
+/* Media Query to Change Image */
+@media only screen and (max-width:700px) {
+
+  .hero{
+    display:relative;
+    height:10rem;
+  }
+  .logo{
+    position:absolute;
+    top:2rem;
+    padding:0px;
+    left:2rem;
+  }
+  .hero__image{
+    display:none;
+  }
+  .hero__image--mobile{
+    display:flex;
+    width:100vw;
+    position:absolute;
+    justify-content:center;
+    margin:auto;
+    top:calc(var(--line-padding)*3);
+  }
+  .card{
+    display:flex;
+    position:relative;
+    margin-top:25em;
+    width:100vw;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+  }
+  .attribution{
+    position:absolute;
+    bottom:0px;
+  }
+  .card__title{
+    min-width:100%;
+    font-size:1.8em;
+    padding:0px;
+    text-align: center;
+    margin-left:0px;
+    padding-bottom:1rem
+
+  }
+   .card__greeting{
+    text-align:center;
+    width:100%;
+    margin-left:0rem;
+    padding:0px;
+  }
+  form{
+    position: relative;
+    bottom:0px;
+  }
+}
