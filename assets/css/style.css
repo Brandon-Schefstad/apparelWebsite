@@ -198,7 +198,6 @@ Gradients
 .card__email__input--error{
   position:absolute;
   width:2.5em;
-  background: green;
   left:22%;
   top:4%;
 }
