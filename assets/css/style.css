@@ -169,24 +169,8 @@ Gradients
   border: 2px solid hsl(0, 56%, 81%);
   position:relative;
   border-radius: 2rem;
+  padding:1rem;
 }
-.error{
-  border:2px solid red;
-  width:35%;
-}
-.error::before{
-  content:'';
-  display:block;
-  background-image: url('/images/icon-error.svg');
-  background-repeat: no-repeat;
-  position:absolute;
-  right:0;
-  top:10px;
-  height:100%;
-  width:5%;
-  z-index:7;
-}
-
 .card__email__button{
   height:40px;
   border-radius:2rem;
@@ -196,8 +180,6 @@ Gradients
   padding:0.7rem 2rem;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   box-shadow:00px 5px 10px hsl(0, 74%, 74%);
-
-
 }
 .hero__image{
   position:absolute;
@@ -206,59 +188,103 @@ Gradients
 .hero__image--mobile{
   display:none;
 }
+
+/* 
+########
+###States
+######## */
+
+.card__email__input--error{
+  position:absolute;
+  right:23%;
+  bottom:20%;
+}
+.card__email__input--error__text{
+  position:absolute;
+  left: 0rem;
+  top:20%;
+
+}
+
 /* Media Query to Change Image */
 @media only screen and (max-width:700px) {
 
-  .hero{
-    display:relative;
-    height:10rem;
-  }
-  .logo{
-    position:absolute;
-    top:2rem;
-    padding:0px;
-    left:2rem;
-  }
-  .hero__image{
-    display:none;
-  }
-  .hero__image--mobile{
-    display:flex;
-    width:100vw;
-    position:absolute;
-    justify-content:center;
-    margin:auto;
-    top:calc(var(--line-padding)*3);
-  }
-  .card{
-    display:flex;
-    position:relative;
-    margin-top:25em;
-    width:100vw;
-    padding: 0px 0px 0px 0px;
-    align-content: center;
-  }
-  .attribution{
-    position:absolute;
-    bottom:0px;
-  }
-  .card__title{
-    min-width:100%;
-    font-size:1.8em;
-    padding:0px;
-    text-align: center;
-    margin-left:0px;
-    padding-bottom:1rem
+.hero{
+  display:relative;
+  height:10rem;
+}
+.logo{
+  position:absolute;
+  top:2rem;
+  padding:0px;
+  left:2rem;
+}
+.hero__image{
+  display:none;
+}
+.hero__image--mobile{
+  display:flex;
+  width:100vw;
+  position:absolute;
+  justify-content:center;
+  margin:auto;
+  top:calc(var(--line-padding)*3);
+}
+.card{
+  display:flex;
+  position:relative;
+  margin-top:25em;
+  width:100vw;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+}
+.attribution{
+  position:absolute;
+  bottom:0px;
+}
+.card__title{
+  min-width:100%;
+  font-size:1.8em;
+  padding:0px;
+  text-align: center;
+  margin-left:0px;
+  padding-bottom:1rem
 
-  }
-   .card__greeting{
-    text-align:center;
-    width:100%;
-    margin-left:0rem;
-    padding:0px;
-  }
-  form{
-    position: relative;
-    bottom:0px;
-  }
+}
+.card__greeting{
+  text-align:center;
+  font-size:1.4rem;
+  width:100%;
+  margin-left:0rem;
+  padding:1rem;
+  margin-bottom:1rem;
+}
+form{
+  position: relative;
+  bottom:0px;
+}
+.card__email{
+  position:relative;
+  width:100%;
+  padding-left:2rem;
+}
+.card__email__input{
+  height:4rem;
+  font-size:1.2rem;
+}
+.card__email__button{
+  height:4rem;
+  width:20%;
+}
+
+
+/* ##########
+UTILS
+########## */
+
+.visible{
+  display:block;
+}
+.hidden{
+  display:none;
 }
