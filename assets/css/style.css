@@ -78,7 +78,6 @@ Gradients
   /* Set core body defaults */
   body {
     min-height: 100vh;
-    overflow: hidden;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     background-color: #FFF6F6;
@@ -235,6 +234,9 @@ Gradients
 
 /* Media Query to Change Image */
 @media only screen and (max-width:1300px) {
+  .body{
+    overflow: scroll;
+  }
   .hero{
     display:relative;
     height:10rem;
@@ -325,6 +327,9 @@ Gradients
   }
 }
 @media only screen and (max-width:800px){
+  .body{
+    overflow: scroll;
+  }
   .card__email{
     width:80%;
     margin:auto;
@@ -333,6 +338,9 @@ Gradients
 }
 
 @media only screen and (max-width:600px){
+  .body{
+    overflow: scroll;
+  }
   .card__email{
     width:90%;
     margin:auto;
@@ -353,6 +361,9 @@ Gradients
   }
 }
 @media only screen and (max-width:400px){
+  .body{
+    overflow: scroll;
+  }
   .card__email{
     width:90%;
     margin:auto;
