@@ -81,6 +81,7 @@ Gradients
     overflow: hidden;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-color: #FFF6F6;
   }
   
   /* A elements that don't have a class get default styles */
@@ -111,10 +112,12 @@ Gradients
 */
 
 .wrapper{
-  max-width: 1400px;
+  width:100vw;
+  max-width: 1800px;
   margin-left:auto;
   margin-right: auto;
   position:relative;
+  background-image: url("/images/bg-pattern-desktop.svg");
 }
 .hero{
   height:50.2rem;
@@ -126,7 +129,7 @@ Gradients
   z-index:3;
 }
 .card{
-  background-image: url("/images/bg-pattern-desktop.svg");
+
   width:118rem;
   position:absolute;
   left:0;
