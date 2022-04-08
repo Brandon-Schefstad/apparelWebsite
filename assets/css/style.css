@@ -110,9 +110,14 @@ Gradients
   ###############
 */
 
-
+.wrapper{
+  max-width: 1400px;
+  margin-left:auto;
+  margin-right: auto;
+}
 .hero{
   height:50.2rem;
+  max-width:1400px;
 }
 .logo{
   position:absolute;
@@ -184,7 +189,9 @@ Gradients
 }
 .hero__image{
   position:absolute;
-  right:0;
+  right:5em;
+  padding-top:5em;
+  max-width:500px;
 }
 .hero__image--mobile{
   display:none;
@@ -208,7 +215,7 @@ Gradients
 }
 
 /* Media Query to Change Image */
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:1300px) {
   .hero{
     display:relative;
     height:10rem;
@@ -225,8 +232,9 @@ Gradients
   .hero__image--mobile{
     display:block;
     min-width:300px;
-    max-width:700px;
+    max-width:800px;
     width:97%;
+    padding-left:1em;
     margin-left:auto;
     margin-right:auto;
     padding-top:calc(var(--line-padding)*3);
