@@ -8,6 +8,7 @@ function acceptEmailInput() {
   if (isPossiblyValidEmail(email)){
     alert(`Thank you for signing up using ${email}!`)
   }else {
+    document.querySelector('.card__email__input').classList.add('red-border')
     document.querySelector('.card__email__input--error').classList.add('visible');
     document.querySelector('.card__email__input--error').classList.remove('hidden')
     document.querySelector('.card__email__input--error__text').classList.remove('hidden')
