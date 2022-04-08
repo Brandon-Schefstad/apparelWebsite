@@ -351,6 +351,9 @@ Gradients
     margin:auto;
     margin-top:-1rem;
   }
+  .card__email__input{
+    font-size: 0.8em;
+  }
   .card__email__input--error{
     position:absolute;
     width:2.5em;
@@ -373,6 +376,9 @@ Gradients
     width:90%;
     margin:auto;
     margin-top:3rem;
+  }
+  .card__email__input{
+    font-size: 0.5em;
   }
 }
 /* ##########
