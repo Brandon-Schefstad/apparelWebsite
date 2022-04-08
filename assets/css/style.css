@@ -214,10 +214,13 @@ Gradients
 .hero__image--mobile{
   display:none;
 }
-footer{
+.attribution{
   position:absolute;
-  bottom:0px;
+  margin-left:auto;
+  margin-right: auto;
+  bottom:0em;
   width:100vw;
+  height:50px;
   text-align:center;
 }
 /* 
