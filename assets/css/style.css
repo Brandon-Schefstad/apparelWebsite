@@ -368,6 +368,12 @@ Gradients
     color:red;
   }
 }
+@media only screen and (max-width:500px){
+  .card__email__input{
+    font-size: 0.8rem;
+    text-align:left;
+  }
+}
 @media only screen and (max-width:400px){
   .body{
     overflow: scroll;
@@ -377,11 +383,7 @@ Gradients
     margin:auto;
     margin-top:3rem;
   }
-  .card__email__input{
-    font-size: 0.8rem;
-    text-align:left;
 
-  }
 }
 /* ##########
 UTILS
