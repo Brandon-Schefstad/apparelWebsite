@@ -114,6 +114,7 @@ Gradients
   max-width: 1400px;
   margin-left:auto;
   margin-right: auto;
+  position:relative;
 }
 .hero{
   height:50.2rem;
@@ -122,10 +123,13 @@ Gradients
 .logo{
   position:absolute;
   padding: 8em 0em 0em 8em;
+  z-index:3;
 }
 .card{
   background-image: url("/images/bg-pattern-desktop.svg");
   width:118rem;
+  position:absolute;
+  left:0;
   height:50rem;
   display:flex;
   flex-direction: column;
@@ -189,9 +193,21 @@ Gradients
 }
 .hero__image{
   position:absolute;
-  right:5em;
+  right:8em;
   padding-top:5em;
   max-width:500px;
+  z-index:3;
+}
+.hero__image::after{
+  content:'loremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsumloremipsum';
+  display:inline-block;
+  height:40px;
+  width:40px;
+  position:absolute;
+  left:0;
+  right:0;
+  background: rgb(15, 15, 14);
+  z-index:5;
 }
 .hero__image--mobile{
   display:none;
@@ -234,7 +250,6 @@ Gradients
     min-width:300px;
     max-width:800px;
     width:97%;
-    padding-left:1em;
     margin-left:auto;
     margin-right:auto;
     padding-top:calc(var(--line-padding)*3);
